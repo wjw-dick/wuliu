@@ -1,0 +1,7 @@
+{
+  "description": "物流货运数字化平台 - 承运商小程序",
+  "projectname": "miniprogram-carrier",
+  "appid": "touristappid",
+  "setting": { "urlCheck": false, "es6": true, "postcss": true, "minified": true },
+  "compileType": "miniprogram"
+}

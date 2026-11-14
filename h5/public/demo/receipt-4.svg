@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="卸货现场照片">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d3dd" />
+      <stop offset="1" stop-color="#eef2f6" />
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa3ac" />
+      <stop offset="1" stop-color="#767f88" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#wall)" />
+  <rect x="0" y="600" width="800" height="400" fill="url(#ground)" />
+  <rect x="80" y="120" width="280" height="480" fill="#aeb9c4" rx="3" />
+  <path d="M80 120h280v480H80z" fill="none" stroke="#94a1ad" stroke-width="3" />
+  <path d="M220 120v480M80 360h280" stroke="#94a1ad" stroke-width="3" />
+  <rect x="440" y="180" width="280" height="420" fill="#b9c3cd" rx="3" />
+  <rect x="470" y="230" width="220" height="150" fill="#dde5ec" rx="2" />
+  <text x="580" y="290" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#5b6b7c">8 幢 1 层</text>
+  <text x="580" y="330" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#7b8899">收货口</text>
+  <g>
+    <rect x="120" y="640" width="180" height="140" fill="#c8a97a" rx="4" />
+    <rect x="136" y="662" width="72" height="46" fill="#fff" rx="2" />
+    <text x="172" y="690" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#5c6c80">机械配件</text>
+    <rect x="330" y="660" width="160" height="120" fill="#cdb087" rx="4" />
+    <rect x="346" y="682" width="60" height="40" fill="#fff" rx="2" />
+    <rect x="520" y="630" width="170" height="150" fill="#c8a97a" rx="4" />
+    <path d="M520 680h170M520 730h170" stroke="#b5976b" stroke-width="2" />
+  </g>
+  <g>
+    <rect x="300" y="800" width="220" height="20" rx="4" fill="#3f4a55" />
+    <rect x="330" y="820" width="30" height="40" fill="#2c343c" />
+    <rect x="460" y="820" width="30" height="40" fill="#2c343c" />
+    <circle cx="345" cy="860" r="12" fill="#1e242a" />
+    <circle cx="475" cy="860" r="12" fill="#1e242a" />
+    <rect x="330" y="758" width="150" height="50" fill="#c8a97a" rx="3" />
+  </g>
+  <rect x="0" y="880" width="800" height="120" fill="#071a33" opacity=".65" />
+  <text x="46" y="930" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#ffffff" opacity=".9">卸货与签收现场</text>
+  <text x="46" y="962" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#ffffff" opacity=".62">2026-11-14 16:38 · 杭州余杭</text>
+  <text x="754" y="944" text-anchor="end" font-family="Consolas, monospace" font-size="14" fill="#ffffff" opacity=".55">YH0001202611140001</text>
+</svg>

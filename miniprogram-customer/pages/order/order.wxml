@@ -1,0 +1,14 @@
+<view class="card">
+  <view class="card-title">我的运单</view>
+  <block wx:if="{{orders.length}}">
+    <view class="list-item" wx:for="{{orders}}" wx:key="id">
+      <view class="row">
+        <view style="font-size:28rpx;font-weight:600">{{item.waybillNo}}</view>
+        <view style="font-size:24rpx;color:#1f6feb">{{item.status}}</view>
+      </view>
+      <view class="muted" style="margin-top:8rpx">{{item.origin}} → {{item.destination}}</view>
+      <view class="muted">金额：{{item.totalAmount}} 元 · {{item.cargoName}}</view>
+    </view>
+  </block>
+  <view wx:else class="muted" style="text-align:center;padding:40rpx 0">暂无运单，请先登录或拨打电话下单</view>
+</view>

@@ -1,0 +1,24 @@
+<view class="card">
+  <view class="card-title">快速询价</view>
+  <view class="row2">
+    <view>
+      <view class="label">出发地</view>
+      <input class="input" value="{{origin}}" bindinput="onOrigin" placeholder="如：上海" />
+    </view>
+    <view>
+      <view class="label">目的地</view>
+      <input class="input" value="{{destination}}" bindinput="onDest" placeholder="如：北京" />
+    </view>
+  </view>
+  <view class="label">重量(kg)</view>
+  <input class="input" type="number" value="{{weight}}" bindinput="onWeight" />
+  <view class="btn {{quoting ? 'disable' : ''}}" bindtap="quote">{{ quoting ? '计算中…' : '立即询价' }}</view>
+  <view wx:if="{{quote}}" class="msg ok">参考价：{{quote.total}} 元（计费 {{quote.chargeWeight}}kg）</view>
+</view>
+
+<view class="card">
+  <view class="card-title">快速跟踪</view>
+  <view class="label">运单号</view>
+  <input class="input" value="{{trackNo}}" bindinput="onTrackNo" placeholder="输入运单号" />
+  <view class="btn ghost" bindtap="goTrack">查询轨迹</view>
+</view>

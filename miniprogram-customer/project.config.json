@@ -1,0 +1,12 @@
+{
+  "description": "物流货运数字化平台 - 客户小程序",
+  "projectname": "miniprogram-customer",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram"
+}

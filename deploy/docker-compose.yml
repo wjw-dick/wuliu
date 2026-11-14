@@ -1,0 +1,96 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: wuliu-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: wuliu
+      MYSQL_USER: wuliu
+      MYSQL_PASSWORD: wuliu123
+      TZ: Asia/Shanghai
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "13306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: wuliu-redis
+    restart: always
+    ports:
+      - "16379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: wuliu-backend
+    restart: always
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_URL: jdbc:mysql://mysql:3306/wuliu?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+      DB_USER: wuliu
+      DB_PASSWORD: wuliu123
+      APP_CACHE_TYPE: redis
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: "6379"
+      APP_JWT_SECRET: ${APP_JWT_SECRET:-change-this-secret-in-production}
+      TZ: Asia/Shanghai
+    ports:
+      - "8080:8080"
+
+  admin-web:
+    image: nginx:alpine
+    container_name: wuliu-admin
+    restart: always
+    depends_on:
+      - backend
+    volumes:
+      - ../admin-web/dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "5173:80"
+
+  official-web:
+    image: nginx:alpine
+    container_name: wuliu-official
+    restart: always
+    depends_on:
+      - backend
+    volumes:
+      - ../official-web/dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "5174:80"
+
+  h5:
+    image: nginx:alpine
+    container_name: wuliu-h5
+    restart: always
+    depends_on:
+      - backend
+    volumes:
+      - ../h5/dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "5175:80"
+
+volumes:
+  mysql-data:
+  redis-data:

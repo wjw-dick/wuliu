@@ -1,0 +1,16 @@
+<view class="card">
+  <view class="label">运单号</view>
+  <input class="input" value="{{no}}" bindinput="onNo" placeholder="输入运单号" />
+  <view class="btn {{loading ? 'disable' : ''}}" bindtap="track">{{ loading ? '查询中…' : '查询' }}</view>
+  <view wx:if="{{msg}}" class="msg {{ok ? 'ok' : 'err'}}">{{msg}}</view>
+</view>
+
+<view wx:if="{{result}}" class="card">
+  <view class="card-title">{{result.waybillNo}} · {{result.status}}</view>
+  <view class="muted">{{result.origin}} → {{result.destination}}</view>
+  <view class="list-item" wx:for="{{result.nodes}}" wx:key="time">
+    <view class="muted">{{item.time}}</view>
+    <view style="font-size:28rpx;margin-top:4rpx">{{item.node}}</view>
+    <view class="muted">{{item.address}}</view>
+  </view>
+</view>

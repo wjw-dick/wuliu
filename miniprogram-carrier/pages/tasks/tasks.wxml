@@ -1,0 +1,18 @@
+<view class="card">
+  <view class="card-title">承运任务</view>
+  <block wx:if="{{tasks.length}}">
+    <view class="list-item" wx:for="{{tasks}}" wx:key="id">
+      <view class="row">
+        <view style="font-size:28rpx;font-weight:600">{{item.waybillNo}}</view>
+        <view style="font-size:24rpx;color:#1f6feb">{{item.status}}</view>
+      </view>
+      <view class="muted" style="margin-top:8rpx">{{item.origin}} → {{item.destination}}</view>
+      <view class="muted">收货人：{{item.receiverName}} {{item.receiverPhone}}</view>
+      <view class="row" style="margin-top:12rpx">
+        <view class="btn ghost" style="margin-top:0;padding:14rpx" bindtap="report" data-id="{{item.id}}">报节点</view>
+        <view class="btn" style="margin-top:0;padding:14rpx" bindtap="sign" data-id="{{item.id}}">签收</view>
+      </view>
+    </view>
+  </block>
+  <view wx:else class="muted" style="text-align:center;padding:40rpx 0">暂无承运任务</view>
+</view>

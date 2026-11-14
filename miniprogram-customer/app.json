@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/track/track",
+    "pages/order/order"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1f6feb",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "示例物流",
+    "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#909399",
+    "selectedColor": "#1f6feb",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/track/track", "text": "跟踪" },
+      { "pagePath": "pages/order/order", "text": "我的订单" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

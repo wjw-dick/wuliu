@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
+
+Sitemap: https://www.chiyuan-logistics.com/sitemap.xml

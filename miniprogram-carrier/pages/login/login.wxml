@@ -1,0 +1,10 @@
+<view class="card">
+  <view class="card-title">承运商登录</view>
+  <view class="label">手机号</view>
+  <input class="input" value="{{phone}}" bindinput="onPhone" type="number" placeholder="输入手机号" />
+  <view class="label">验证码</view>
+  <input class="input" value="{{code}}" bindinput="onCode" type="number" placeholder="演示验证码：1234" />
+  <view class="btn {{loading ? 'disable' : ''}}" bindtap="login">{{ loading ? '登录中…' : '登录' }}</view>
+  <view wx:if="{{msg}}" class="msg {{ok ? 'ok' : 'err'}}">{{msg}}</view>
+  <view class="muted" style="margin-top:20rpx;text-align:center">演示：任意手机号 + 验证码 1234 即可登录承运商端</view>
+</view>

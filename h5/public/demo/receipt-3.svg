@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="签收回单照片">
+  <defs>
+    <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffefb" />
+      <stop offset="1" stop-color="#f2ecdf" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="#ddd7cb" />
+  <rect x="70" y="80" width="660" height="840" rx="5" fill="url(#p2)" stroke="#d8d0c1" />
+  <text x="400" y="150" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#0e1b2c" letter-spacing="3">签 收 回 单</text>
+  <line x1="110" y1="185" x2="690" y2="185" stroke="#cfc6b6" />
+  <g font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#33465d">
+    <text x="110" y="235" fill="#7b8899">运单号</text><text x="200" y="235" font-family="Consolas, monospace">YH0001202611140001</text>
+    <text x="110" y="285" fill="#7b8899">签收时间</text><text x="200" y="285">2026-11-14 16:42</text>
+    <text x="110" y="335" fill="#7b8899">签收人</text><text x="200" y="335">李明　138****0002</text>
+    <text x="110" y="385" fill="#7b8899">签收地点</text><text x="200" y="385">杭州市余杭区仓前街道文一西路 1500 号</text>
+    <text x="110" y="435" fill="#7b8899">货物件数</text><text x="200" y="435">10 件（与托运单一致）</text>
+    <text x="110" y="485" fill="#7b8899">外包装</text><text x="200" y="485">完好，无破损、无受潮</text>
+  </g>
+  <rect x="110" y="520" width="580" height="96" rx="4" fill="#f8f4ea" stroke="#e3dbcb" />
+  <text x="128" y="552" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#7b8899">签收意见</text>
+  <text x="128" y="584" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#33465d">已验货，件数相符，外包装完好，同意签收。</text>
+  <text x="110" y="700" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#7b8899">收货人签名</text>
+  <text x="255" y="700" font-family="KaiTi, STKaiti, serif" font-size="62" fill="#1b3a6b" transform="rotate(-5 300 690)">李明</text>
+  <line x1="250" y1="715" x2="470" y2="715" stroke="#9aa8b8" />
+  <g transform="translate(600 730) rotate(-12)">
+    <circle r="62" fill="none" stroke="#c0392b" stroke-width="3" opacity=".6" />
+    <text text-anchor="middle" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#c0392b" opacity=".7">货物已签收</text>
+    <text text-anchor="middle" y="20" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#c0392b" opacity=".7">2026.11.14</text>
+  </g>
+  <text x="110" y="800" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#8494a8">备注：收货人当场验货，回单由司机拍照上传，原件随车返回。</text>
+  <line x1="110" y1="835" x2="690" y2="835" stroke="#e3dbcb" />
+  <text x="400" y="872" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#a5b1c1">上海驰远物流有限公司 · 客服热线 400-880-1688</text>
+</svg>

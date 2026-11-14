@@ -1,0 +1,24 @@
+page {
+  background: #f5f6fa;
+  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  color: #1f2d3d;
+}
+.card { background: #fff; border-radius: 16rpx; padding: 28rpx; margin: 20rpx; box-shadow: 0 2rpx 8rpx rgba(0,0,0,.04); }
+.card-title { font-size: 30rpx; font-weight: 600; margin-bottom: 20rpx; }
+.label { font-size: 24rpx; color: #909399; margin: 16rpx 0 8rpx; }
+.input { background: #fafafa; border: 1rpx solid #e4e7ed; border-radius: 12rpx; padding: 18rpx; font-size: 28rpx; }
+.btn { background: #1f6feb; color: #fff; border-radius: 12rpx; text-align: center; padding: 22rpx; font-size: 30rpx; font-weight: 600; margin-top: 28rpx; }
+.btn.ghost { background: #fff; color: #1f6feb; border: 1rpx solid #1f6feb; }
+.btn.disable { opacity: .6; }
+.row { display: flex; justify-content: space-between; align-items: center; }
+.row2 { display: flex; gap: 16rpx; }
+.row2 > view { flex: 1; }
+.muted { color: #909399; font-size: 24rpx; }
+.big { font-size: 44rpx; color: #1f6feb; font-weight: 700; }
+.list-item { padding: 24rpx 0; border-bottom: 1rpx solid #f0f0f0; }
+.list-item:last-child { border-bottom: none; }
+.msg { padding: 16rpx; border-radius: 12rpx; margin-top: 16rpx; font-size: 26rpx; }
+.msg.ok { background: #f0f9eb; color: #67c23a; }
+.msg.err { background: #fef0f0; color: #f56c6c; }
+.menu { display: flex; gap: 16rpx; }
+.menu .btn { flex: 1; }

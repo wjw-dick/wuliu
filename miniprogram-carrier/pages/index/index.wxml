@@ -1,0 +1,18 @@
+<view class="card">
+  <view class="card-title">待承运订单</view>
+  <view class="menu">
+    <view class="btn" bindtap="goTasks">我的任务</view>
+    <view class="btn ghost" bindtap="goSettle">对账结算</view>
+  </view>
+  <block wx:if="{{orders.length}}">
+    <view class="list-item" wx:for="{{orders}}" wx:key="id">
+      <view class="row">
+        <view style="font-size:28rpx;font-weight:600">{{item.waybillNo}}</view>
+        <view style="font-size:24rpx;color:#1f6feb">{{item.status}}</view>
+      </view>
+      <view class="muted" style="margin-top:8rpx">{{item.origin}} → {{item.destination}}</view>
+      <view class="muted">应付：{{item.payable}} 元 · {{item.weight}}kg</view>
+    </view>
+  </block>
+  <view wx:else class="muted" style="text-align:center;padding:40rpx 0">暂无待承运订单</view>
+</view>

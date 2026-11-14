@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; margin: 0; }
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  background: #f5f7fa;
+  color: #303133;
+  font-size: 14px;
+}
+
+.page { padding: 16px; }
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.page-title { font-size: 18px; font-weight: 600; color: #1f2d3d; }
+.page-sub { font-size: 13px; color: #909399; margin-top: 2px; }
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.toolbar .el-input { width: 220px; }
+.toolbar .el-select { width: 150px; }
+
+.card { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.mb { margin-bottom: 16px; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.stat-card { background: #fff; border-radius: 8px; padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.06); border-left: 4px solid #409eff; }
+.stat-card .label { color: #909399; font-size: 13px; }
+.stat-card .value { font-size: 26px; font-weight: 700; margin-top: 6px; color: #1f2d3d; }
+.stat-card .hint { color: #c0c4cc; font-size: 12px; margin-top: 4px; }
+
+.chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 900px) { .chart-row { grid-template-columns: 1fr; } }
+
+.login-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f6feb 0%, #6f42c1 100%);
+}
+.login-box {
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.2);
+}
+.login-box h1 { font-size: 22px; text-align: center; margin: 0 0 4px; color: #1f6feb; }
+.login-box .sub { text-align: center; color: #909399; font-size: 13px; margin-bottom: 22px; }
+
+.el-table .el-button + .el-button { margin-left: 4px; }

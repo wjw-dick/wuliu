@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/tasks/tasks",
+    "pages/settle/settle"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1f6feb",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "承运商端",
+    "backgroundColor": "#f5f6fa"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,14 @@
+<view class="card">
+  <view class="card-title">应付对账</view>
+  <view wx:if="{{list.length}}" class="big" style="text-align:center;margin-bottom:16rpx">合计 {{total}} 元</view>
+  <block wx:if="{{list.length}}">
+    <view class="list-item" wx:for="{{list}}" wx:key="id">
+      <view class="row">
+        <view style="font-size:28rpx">{{item.waybillNo}}</view>
+        <view style="font-size:24rpx;color:#1f6feb">{{item.status}}</view>
+      </view>
+      <view class="muted" style="margin-top:4rpx">应付 {{item.amount}} 元</view>
+    </view>
+  </block>
+  <view wx:else class="muted" style="text-align:center;padding:40rpx 0">暂无对账数据</view>
+</view>

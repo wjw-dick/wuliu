@@ -1,0 +1,23 @@
+# 依赖与构建产物（全局忽略，确保不入库）
+node_modules/
+dist/
+target/
+build/
+.dart_tool/
+.idea/
+*.iml
+*.log
+*.err.log
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# 各子目录的构建/缓存
+admin-web/dist/
+official-web/dist/
+h5/dist/
+backend/**/target/
+driver-app/.dart_tool/
+driver-app/build/
+driver-app/ios/Pods/
+driver-app/android/.gradle/
